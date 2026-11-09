@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zustand Event Management System
+
+A practical project built while learning **Zustand state management** with **Next.js**.
+
+This project demonstrates how to manage global state in a React application using Zustand, with a real-world Event Booking Management System as the final project.
+
+## Features
+
+- **Event Management:** Create, read, update, and delete events.
+- **Seat Booking:** Book and cancel event seats.
+- **Search & Filtering:** Search events by title and filter by category and availability.
+- **Dashboard Statistics:** Display total events, capacity, booked seats, available seats, and booking percentage.
+- **Persist Middleware:** Save event data in browser local storage.
+- **DevTools Middleware:** Debug and inspect Zustand state changes.
+- **API Integration:** Fetch sample data from DummyJSON and import it into the event list.
+- **Multiple Stores:** Organize application state using separate stores.
+- **Selectors:** Access specific state values and improve component performance.
+- **TypeScript:** Explore typed Zustand stores.
+- **Testing:** Practice testing Zustand store actions with Vitest.
+
+## Tech Stack
+
+- Next.js
+- React
+- JavaScript
+- Zustand
+- Tailwind CSS
+- Vitest
+- DummyJSON API
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── event-management/
+│   ├── shopping-cart/
+│   ├── expense-tracker/
+│   ├── recipe-explorer/
+│   ├── travel-planner/
+│   └── ...
+│
+├── components/
+│   └── events/
+│       ├── EventDashboard.jsx
+│       ├── EventForm.jsx
+│       ├── EventCard.jsx
+│       ├── EventList.jsx
+│       ├── EventFilters.jsx
+│       ├── EventStatistics.jsx
+│       └── ApiEventImporter.jsx
+│
+├── store/
+│   ├── events/
+│   │   └── useEventStore.js
+│   └── ...
+│
+└── test/
+```
+
+*The structure above highlights the main learning routes and event-management components.*
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/zustand-event-management.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd zustand-event-management
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 5. Run tests (optional)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run test:run
+```
 
-## Learn More
+## Learning Goals
 
-To learn more about Next.js, take a look at the following resources:
+This project covers practical Zustand concepts:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Creating Zustand stores
+- Managing state and actions
+- Updating arrays and objects immutably
+- Sharing global state between components
+- Using selectors and optimizing re-renders
+- Persisting state with middleware
+- Debugging with DevTools
+- Handling asynchronous API requests
+- Managing multiple stores
+- Working with TypeScript
+- Building a real-world application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Information
 
-## Deploy on Vercel
+Sample API data is retrieved from [DummyJSON](https://dummyjson.com/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The API posts are converted into sample event records for demonstration purposes. They are not real event listings.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Purpose
+
+This repository is part of my hands-on learning journey with Zustand and modern React state management.
+
+The goal is to understand concepts through practical implementation and build maintainable applications.
+
+---
+
+**Built with Next.js, React & Zustand.**
